@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search stories..." />
+
+<div *ngFor="let story of filteredStories">
+  <div>
+    <a *ngIf="story.url; else noLink" [href]="story.url" target="_blank">{{ story.title }}</a>
+    <ng-template #noLink>
+      <span>{{ story.title }} (No link available)</span>
+    </ng-template>
+  </div>
+</div>
+
+<button (click)="prevPage()" [disabled]="page === 1">Previous</button>
+<button (click)="nextPage()">Next</button>

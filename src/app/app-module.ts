@@ -1,21 +1,27 @@
-import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
+
+import { StoriesComponent } from './features/components/story-list/story-list.component';
+import { AppComponent } from './app';
 import { AppRoutingModule } from './app-routing-module';
-import { App } from './app';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    App
+    AppComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoriesComponent,
+    
+
+    HttpClientModule   // 👈 enable HttpClient across app
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection()
-  ],
-  bootstrap: [App]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
