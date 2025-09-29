@@ -7,8 +7,8 @@ import { StoryDto } from '../../../shared/model/story.dto';
 @Component({
   selector: 'app-stories',
   templateUrl: './story-list.component.html',
-  standalone: true,           // 👈 this is a standalone component
-  imports: [CommonModule,FormsModule],     // 👈 MUST import CommonModule
+  standalone: true,           
+  imports: [CommonModule,FormsModule], 
 })
 export class StoriesComponent implements OnInit {
   stories: StoryDto[] = [];
