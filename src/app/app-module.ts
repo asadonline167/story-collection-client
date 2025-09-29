@@ -15,10 +15,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     BrowserModule,
-    AppRoutingModule,
     StoriesComponent,
-    
-
     HttpClientModule   // 👈 enable HttpClient across app
   ],
   providers: [],
