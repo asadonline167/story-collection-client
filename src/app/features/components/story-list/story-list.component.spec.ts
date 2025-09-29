@@ -1,6 +1,10 @@
+import 'zone.js';
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StoriesComponent } from './story-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('Stories', () => {
   let component: StoriesComponent;
@@ -8,7 +12,9 @@ describe('Stories', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [StoriesComponent]
+      // declarations: [StoriesComponent]
+      imports: [StoriesComponent,HttpClientModule,HttpClientTestingModule ] 
+
     })
     .compileComponents();
 
