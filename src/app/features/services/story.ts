@@ -7,8 +7,7 @@ import { StoryDto } from '../../shared/model/story.dto';
   providedIn: 'root'
 })
 export class StoryService {
-  private apiUrl = 'https://localhost:44388/api/Stories'; // 👈 adjust to your ASP.NET Core API
-
+  private apiUrl = 'https://hackernewsserviceapi-aaffa2bybgdhf6fc.canadacentral-01.azurewebsites.net/api/Stories'; 
   constructor(private http: HttpClient) {}
 
   getTopStories(page: number, pageSize: number): Observable<StoryDto[]> {
